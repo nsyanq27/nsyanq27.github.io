@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Neisya | Interactive</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <audio id="clickSound" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"></audio>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <span class="loader-text">Loading...</span>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <div id="toast">Welcome to Neisya's Creative Universe! 🌌</div>
+    <div id="cursor-trail"></div>
+    <div class="noise-overlay"></div>
+
+    <div id="context-menu">
+        <div class="item" onclick="location.reload()"><i class='bx bx-refresh'></i> Refresh System</div>
+        <div class="item" onclick="window.print()"><i class='bx bx-printer'></i> Print CV</div>
+        <div class="item" onclick="document.getElementById('contact').scrollIntoView()"><i class='bx bx-envelope'></i>
+            Contact Me</div>
+    </div>
+
+    <div class="cookie-container">
+        <p data-i18n="cookie_text">This website uses cookies to ensure you get the best experience.</p>
+        <button class="cookie-btn" data-i18n="cookie_btn">Got it!</button>
+    </div>
+
+    <div class="scroll-progress"></div>
+
+    <div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+
+    <div class="theme-switch-wrapper">
+        <div class="theme-icon"><i class='bx bx-cog bx-spin'></i></div>
+        <div class="theme-colors">
+            <span class="color" style="background: #0ef;" onclick="setColor('#0ef')"></span>
+            <span class="color" style="background: #ff0055;" onclick="setColor('#ff0055')"></span>
+            <span class="color" style="background: #00ff62;" onclick="setColor('#00ff62')"></span>
+            <span class="color" style="background: #ffd500;" onclick="setColor('#ffd500')"></span>
+        </div>
+    </div>
+
+    <div class="progress-wrap-btn active-progress">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+        <i class='bx bx-up-arrow-alt'></i>
+    </div>
+
+    <header class="header">
+        <a href="#" class="logo" data-text="My Portfolio">My Portfolio</a>
+        <nav class="navbar">
+            <a href="#home" class="active" data-i18n="nav_home">Home</a>
+            <a href="#about" data-i18n="nav_about">About</a>
+            <a href="#education" data-i18n="nav_edu">Education</a> 
+            <a href="#organization" data-i18n="nav_org">Experience</a>
+            <a href="#skills" data-i18n="nav_skills">Skills</a>
+            <a href="#portfolio" data-i18n="nav_port">Portfolio</a>
+            <a href="#certificates" data-i18n="nav_certf">Certificates</a>
+            <a href="#contact" data-i18n="nav_contact">Contact</a>
+
+            <div class="right-controls">
+                <div class="mode-toggle" onclick="toggleLightMode()">
+                    <i class='bx bx-sun' id="mode-icon"></i>
+                </div>
+                <div class="lang-switch">
+                    <span id="btn-en" class="active notranslate" onclick="setLanguage('en')">EN</span> |
+                    <span id="btn-id" class="notranslate" onclick="setLanguage('id')">ID</span>
+                </div>
+            </div>
+        </nav>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3 id="greeting" data-i18n="greeting">Hello,</h3>
+            <h3 data-i18n="im_neisya" class="glitch-wrapper"><span class="glitch" data-text="I'm Neisya">I'm
+                    Neisya</span></h3>
+            <h3><span class="multiple-text"></span></h3>
+            <p data-i18n="home_desc" style="text-align: justify; font-size: 13px; line-height: 1.7; margin-top: 5px;">
+                Hi! I'm Neisya, a fifth-semester Educational Informatics student at Trunojoyo Madura University with
+                experience in packaging design using CorelDRAW, 3D animation and architectural modeling with
+                Blender,
+                Android application development using Unity, and website development with HTML, CSS, JavaScript, and
+                PHP. I have a strong interest in educational technology and creative design for digital media. In my
+                organizational experience, I served as a Creative Staff member at Youth Ranger District Jawa, where
+                I
+                contributed to content creation and social media management. Additionally, during my involvement
+                in IKAMASDA, I was responsible for creating publication materials such as event posters,
+                informational
+                content, design templates, social media management, and publication coordination as the Secretary of
+                the
+                Public Relations and Communications Division (Humas Kominfo) for the 2024/2025 term. Previously, I
+                also
+                gained experience as a member of the Kominfo Division for the 2023/2024 period. Currently, I am
+                focusing
+                on developing my portfolio in graphic design, digital media, and educational technology, while
+                continuously seeking collaboration opportunities in digital education, media design, and community
+                development.
+            </p>
+
+            <div class="social-media">
+                <a href="https://www.instagram.com/nsyanq__/" target="_blank" class="tooltip"
+                    data-tooltip="Instagram"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/neisya-nur-qoyimah-b9a3a0296/" target="_blank" class="tooltip"
+                    data-tooltip="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="#" target="_blank" class="tooltip" data-tooltip="Website"><i class='bx bx-globe'></i></a>
+                
+                <a href="mailto:nesya271205@gmail.com" class="tooltip" data-tooltip="Email"><i class='bx bx-envelope'></i></a>
+            </div>
+
+            <a href="#" class="btn ripple-btn magnetic-btn" id="open-cv" data-i18n="btn_cv">View My CV</a>
+        </div>
+
+        <div class="home-img tilt-3d">
+            <img src="./img/aku.png" alt="Foto Profil">
+        </div>
+
+        <a href="#about" class="scroll-down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span data-i18n="scroll_down">Scroll Down</span>
+        </a>
+    </section>
+
+    <div class="marquee">
+        <div class="track">
+            Graphic Design &nbsp;&bull;&nbsp; Social Media Specialist &nbsp;&bull;&nbsp; UI/UX Design
+            &nbsp;&bull;&nbsp;
+            Web Developer &nbsp;&bull;&nbsp; Game-Based Learning App &nbsp;&bull;&nbsp;
+            Graphic Design &nbsp;&bull;&nbsp; Social Media Specialist &nbsp;&bull;&nbsp; UI/UX Design
+            &nbsp;&bull;&nbsp;
+            Web Developer &nbsp;&bull;&nbsp; Game-Based Learning App &nbsp;&bull;&nbsp;
+        </div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="about-img"></div>
+        <div class="about-content">
+            <h2 class="heading neon-pulse" data-text="About Me" data-i18n="heading_about">About <span>Me</span></h2>
+
+            <h3 data-i18n="creative_explorer">Creative Explorer</h3>
+            <p data-i18n="about_desc" style="text-align: justify; font-size: 13px; line-height: 1.7; margin-top: 5px;">
+                Hi! I'm Neisya, a fifth-semester student at Trunojoyo Madura University, majoring in Educational
+                Informatics. Throughout my studies, I have worked on various creative projects such as packaging
+                design
+                using CorelDRAW, 3D animation and architectural design using Blender, Android application
+                development
+                with Unity, and website development using HTML, CSS, JavaScript, and PHP. I have a strong interest
+                in
+                educational technology and creative design for digital media. I have experience as a Creative Staff
+                member at Youth Ranger District Jawa, where I contributed to content creation and social media
+                management. I also served as the Secretary of the Public Relations and Information Communication
+                Division (Hukom) at the Sidoarjo Student Association (IKAMASDA) for the 2024–2025 term, and
+                previously
+                as a member of the Communication and Information Division (Kominfo) for the 2023–2024 term.
+                Currently, I
+                am focused on developing my portfolio in graphic design, digital media, and educational technology.
+                I
+                enjoy working on projects that combine creativity and digital communication, while continuously
+                seeking
+                opportunities to collaborate in digital education, media design, and community development.</p>
+            </p>
+
+            <div class="stats-container">
+                <div class="stat-box glass-effect tilt-card">
+                    <h2 class="counter plus" data-target="20">0</h2>
+                    <p data-i18n="stat_project">Projects Completed</p>
+                </div>
+                <div class="stat-box glass-effect tilt-card">
+                    <h2 class="counter plus" data-target="10">0</h2>
+                    <p data-i18n="stat_exp">Tools & Technologies</p>
+                </div>
+                <div class="stat-box glass-effect tilt-card">
+                    <h2 class="counter plus" data-target="5">0</h2>
+                    <p data-i18n="stat_client">Organizations & Experiences</p>
+                </div>
+            </div>
+
+            <a href="#contact" class="btn ripple-btn magnetic-btn" data-i18n="btn_hire">Hire Me</a>
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="heading neon-pulse" data-text="Education" data-i18n="heading_edu">My <span>Education</span></h2>
+
+        <div class="education-container">
+            <div class="edu-card glass-effect tilt-card">
+                <div class="edu-header">
+                    <span class="edu-year">2017-2020</span>
+                    <img src="img/smp.svg" alt="UTM Logo" class="edu-logo">
+                </div>
+                <div class="edu-body">
+                    <h3>State Junior High School 2 Winongan, Pasuruan</h3>
+                    <p>"When I was in junior high school, I had a great interest in the subjects of Arts and Crafts.
+                        I
+                        really enjoyed drawing and painting, which allowed me to express my creativity through
+                        various
+                        techniques and media. From this experience, I became even more interested in exploring the
+                        creative field and continuously developing my skills in art and design."</p>
+                </div>
+                <div class="edu-icon-bg"><i class='bx bxs-school'></i></div>
+            </div>
+
+            <div class="edu-card glass-effect tilt-card">
+                <div class="edu-header">
+                    <span class="edu-year">2020 - 2023</span>
+                    <img src="img/smk.svg" alt="SMK Logo" class="edu-logo">
+                </div>
+                <div class="edu-body">
+                    <h3>Ma'arif NU Prambon Sidoarjo Vocational High School</h3>
+                    <h4 class="text-main">Multimedia</h4>
+                    <p>"I am a graduate of a Vocational High School (SMK) majoring in Multimedia, with experience in
+                        various design and editing software such as Canva, CorelDRAW, Adobe Illustrator, After
+                        Effects,
+                        Adobe Premiere, Dreamweaver, Adobe Flash, Balsamiq, and Blender 3D. During my studies, I
+                        actively worked on various creative projects using these software tools."</p>
+                </div>
+                <div class="edu-icon-bg"><i class='bx bxs-school'></i></div>
+            </div>
+
+            <div class="edu-card glass-effect tilt-card">
+                <div class="edu-header">
+                    <span class="edu-year">2023-present</span>
+                    <img src="img/utm.jpg" alt="UTM Logo" class="edu-logo">
+                </div>
+                <div class="edu-body">
+                    <h3>Trunojoyo Madura University</h3>
+                    <h4 class="text-main">S1 Informatic Education</h4>
+                    <p>"Currently, I am a 4th-semester student majoring in Informatics Education, a field that
+                        combines
+                        educational science and information technology. Over the past four semesters, I have studied
+                        and
+                        practiced various skills, including developing learning media, creating Augmented Reality
+                        applications using Unity, designing educational animations, and programming with Java and
+                        PHP.
+                        Additionally, I have experience in creating 3D objects using Blender 3D, Packaging Design,
+                        and
+                        video editing. With this background, I continuously strive to enhance my skills in design,
+                        technology, and education to create innovative solutions in the digital learning field."</p>
+                </div>
+                <div class="edu-icon-bg"><i class='bx bxs-graduation'></i></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="journey" id="organization">
+        <div class="journey-decoration">
+            <div class="tech-grid-bg"></div>
+            <div class="glow-orb orb-1"></div>
+            <div class="glow-orb orb-2"></div>
+        </div>
+
+        <h2 class="heading neon-pulse" data-text="Organization" data-i18n="heading_journey">My
+            <span>Experience</span>
+        </h2>
+
+        <div class="journey-container">
+
+            <div class="journey-card glass-effect tilt-card" style="--i:1;">
+                <div class="card-watermark">01</div>
+                <div class="card-border-glow"></div>
+                <div class="journey-header">
+                    <div class="logo-wrapper">
+                        <img src="img/majafmmjk.png" alt="Logo" class="journey-logo">
+                    </div>
+                    <div class="date-badge">
+                        <span data-i18n="journey_date_2">Feb - May 2022</span>
+                    </div>
+                </div>
+                <div class="journey-body">
+                    <div class="role-badge">Internship</div>
+                    <h4 data-i18n="journey_title_2">Graphic Design & Social Media</h4>
+                    <h5 class="sub-title">PT. Radio Majapari Indah Suara Mojokerto</h5>
+                    <p data-i18n="journey_desc_2">"During my internship, I was responsible for various tasks, including typing and editing news texts, as well as designing feeds for information on Maja FM's Instagram social media. Additionally, I learned the recording process for radio broadcasting and sound editing for broadcasts. This experience gave me insight into the world of broadcasting, graphic design, and audio production."</p>
+                </div>
+                <div class="journey-gallery">
+                    <img src="img/magangmaja.jpg" alt="Rapat" class="journey-thumb" onclick="openImageModal(this)">
+                </div>
+            </div>
+
+            <div class="journey-card glass-effect tilt-card" style="--i:2;">
+                <div class="card-watermark">02</div>
+                <div class="card-border-glow"></div>
+                <div class="journey-header">
+                    <div class="logo-wrapper">
+                        <img src="img/jatim.png" alt="Logo" class="journey-logo">
+                    </div>
+                    <div class="date-badge">
+                        <span data-i18n="journey_date_2">Jun - Jul 2022</span>
+                    </div>
+                </div>
+                <div class="journey-body">
+                    <div class="role-badge">Training</div>
+                    <h4 data-i18n="journey_title_2">Designer Training (Logo & Packaging)</h4>
+                    <h5 class="sub-title">UPT. Pengembangan Teknis</h5>
+                    <p data-i18n="journey_desc_2">"I had the opportunity to represent my school in a one-week training program at the UPT for Technical Development and Vocational Skills, organized by the East Java Provincial Education Department. During this training, I studied graphic design with a focus on logo creation and packaging design. I learned to use Adobe Illustrator to design logos and develop packaging designs up to the mockup stage using Photoshop. This experience was invaluable in enhancing my skills in graphic design, particularly in branding and visual identity."</p>
+                </div>
+                <div class="journey-gallery">
+                    <img src="img/upt2.JPG" alt="Rapat" class="journey-thumb" onclick="openImageModal(this)">
+                    <img src="img/upt.JPG" alt="Event" class="journey-thumb" onclick="openImageModal(this)">
+                    <img src="img/upt3.JPG" alt="Team" class="journey-thumb" onclick="openImageModal(this)">
+                </div>
+            </div>
+
+            <div class="journey-card glass-effect tilt-card" style="--i:3;">
+                <div class="card-watermark">03</div>
+                <div class="card-border-glow"></div>
+                <div class="journey-header">
+                    <div class="logo-wrapper">
+                        <img src="img/print2.png" alt="Logo" class="journey-logo">
+                    </div>
+                    <div class="date-badge">
+                        <span data-i18n="journey_date_2">Aug 2022 - Mar 2023</span>
+                    </div>
+                </div>
+                <div class="journey-body">
+                    <div class="role-badge">Freelance</div>
+                    <h4 data-i18n="journey_title_2">Graphic Design</h4>
+                    <h5 class="sub-title">Printing Warna-Warni</h5>
+                    <p data-i18n="journey_desc_2">"I have experience working as a freelance graphic designer, working from home part-time at Printing Warna Warni Sumba Barat. In this job, I was responsible for designing various printed materials, such as invitations, banners for BPPD, banners, logos, posters, pamphlets, brochures, and more. This experience helped me sharpen my graphic design skills, understand client needs, and work within deadlines in the printing industry."</p>
+                </div>
+                <div class="journey-gallery">
+                    </div>
+            </div>
+
+            <div class="journey-card glass-effect tilt-card" style="--i:4;">
+                <div class="card-watermark">04</div>
+                <div class="card-border-glow"></div>
+                <div class="journey-header">
+                    <div class="logo-wrapper">
+                        <img src="img/print.png" alt="Logo" class="journey-logo">
+                    </div>
+                    <div class="date-badge">
+                        <span data-i18n="journey_date_2">Aug 2022 - Mar 2023</span>
+                    </div>
+                </div>
+                <div class="journey-body">
+                    <div class="role-badge">Freelance</div>
+                    <h4 data-i18n="journey_title_2">Graphic Design</h4>
+                    <h5 class="sub-title">Printing Dewarna</h5>
+                    <p data-i18n="journey_desc_2">"I also worked simultaneously as a freelance graphic designer, working from home at Printing Dewarna, which is the second branch of Printing Warna Warni. In this role, I was responsible for designing various printed materials, such as invitations, banners, posters, pamphlets, brochures, and more. This experience further enriched my graphic design skills and expanded my knowledge in the printing and branding industry."</p>
+                </div>
+                <div class="journey-gallery">
+                      </div>
+            </div>
+
+            <div class="journey-card glass-effect tilt-card" style="--i:5;">
+                <div class="card-watermark">05</div>
+                <div class="card-border-glow"></div>
+                <div class="journey-header">
+                    <div class="logo-wrapper">
+                        <img src="img/ikamasda.png" alt="Logo" class="journey-logo">
+                    </div>
+                    <div class="date-badge">
+                        <span data-i18n="journey_date_2">2023 - 2024</span>
+                    </div>
+                </div>
+                <div class="journey-body">
+                    <div class="role-badge">Organization</div>
+                    <h4 data-i18n="journey_title_2">Staff of KOMINFO</h4>
+                    <h5 class="sub-title">IKAMASDA UTM</h5>
+                    <p data-i18n="journey_desc_2">"Responsible for managing and developing IKAMASDA's social media,
+                        including creating monthly feed designs, pamphlets, and various other visual materials to
+                        support the organization's publication and communication, in accordance with the assigned
+                        schedule."</p>
+                </div>
+                <div class="journey-gallery">
+                    <img src="img/raker1.JPG" alt="Rapat" class="journey-thumb" onclick="openImageModal(this)">
+                    <img src="img/49.png" alt="Event" class="journey-thumb" onclick="openImageModal(this)">
+                    <img src="img/ikamasda2.JPG" alt="Team" class="journey-thumb" onclick="openImageModal(this)">
+                </div>
+            </div>
+
+            <div class="journey-card glass-effect tilt-card" style="--i:6;">
+                <div class="card-watermark">06</div>
+                <div class="card-border-glow"></div>
+                <div class="journey-header">
+                    <div class="logo-wrapper">
+                        <img src="img/yri.png" alt="Logo" class="journey-logo">
+                    </div>
+                    <div class="date-badge">
+                        <span data-i18n="journey_date_2">2024 - 2025</span>
+                    </div>
+                </div>
+                <div class="journey-body">
+                    <div class="role-badge">Organization</div>
+                    <h4 data-i18n="journey_title_2">Staff of Creative</h4>
+                    <h5 class="sub-title">Youth Ranger District Jawa</h5>
+                    <p data-i18n="journey_desc_2">"As a Staff of Creative at Youth Ranger District Jawa, I am responsible for creating graphic designs for promotions, education, and activity publications, as well as designing the management feed to enhance organizational engagement."</p>
+                </div>
+                <div class="journey-gallery">
+                    <img src="img/yri2.jpg" alt="Rapat" class="journey-thumb" onclick="openImageModal(this)">
+                    <img src="img/yri3.png" alt="Event" class="journey-thumb" onclick="openImageModal(this)">
+                    <img src="img/yri4.png" alt="Team" class="journey-thumb" onclick="openImageModal(this)">
+                </div>
+            </div>
+
+            <div class="journey-card glass-effect tilt-card" style="--i:7;">
+                <div class="card-watermark">07</div>
+                <div class="card-border-glow"></div>
+                <div class="journey-header">
+                    <div class="logo-wrapper">
+                        <img src="img/ikamasda.png" alt="Logo" class="journey-logo">
+                    </div>
+                    <div class="date-badge">
+                        <span data-i18n="journey_date_2">2024 - 2025</span>
+                    </div>
+                </div>
+                <div class="journey-body">
+                    <div class="role-badge">Leadership</div>
+                    <h4 data-i18n="journey_title_2">Secretary of Public Relations</h4>
+                    <h5 class="sub-title">IKAMASDA UTM</h5>
+                    <p data-i18n="journey_desc_2">"Managing the preparation of activity reports and supporting
+                        communication and publication strategies to make the organization more effective and
+                        structured.
+                        I am responsible for the communication and information sector, including managing and
+                        developing
+                        IKAMASDA's social media, as well as designing and publishing feeds according to the assigned
+                        schedule."</p>
+                </div>
+                <div class="journey-gallery">
+                    <img src="img/ss1.png" alt="Rapat" class="journey-thumb" onclick="openImageModal(this)">
+                    <img src="img/ikamasdaa2.jpeg" alt="Event" class="journey-thumb" onclick="openImageModal(this)">
+                    <img src="img/ss2.png" alt="Team" class="journey-thumb" onclick="openImageModal(this)">
+                </div>
+            </div>
+
+            <div class="journey-card glass-effect tilt-card" style="--i:8;">
+                <div class="card-watermark">08</div>
+                <div class="card-border-glow"></div>
+                <div class="journey-header">
+                    <div class="logo-wrapper">
+                        <img src="img/ikamasda.png" alt="Logo" class="journey-logo">
+                    </div>
+                    <div class="date-badge">
+                        <span data-i18n="journey_date_2">Dec 2024</span>
+                    </div>
+                </div>
+                <div class="journey-body">
+                    <div class="role-badge">Volunteer</div>
+                    <h4 data-i18n="journey_title_2">Community Service & Teaching</h4>
+                    <h5 class="sub-title">IKAMASDA UTM</h5>
+                    <p data-i18n="journey_desc_2">"Participated as a committee member in the Community Service and
+                        IKAMASDA Teaching Program. In the morning session, actively engaged in teaching 6th-grade
+                        elementary school students, aiming to enhance learning motivation and understanding of basic
+                        educational materials. In the evening, took part in community service activities in Simo
+                        Angin-Angin Village, Sidoarjo, focusing on community empowerment and increasing social
+                        awareness."</p>
+                </div>
+                <div class="journey-gallery">
+                    <img src="img/mengajar1.JPG" alt="Rapat" class="journey-thumb" onclick="openImageModal(this)">
+                    <img src="img/sertif1.png" alt="Event" class="journey-thumb" onclick="openImageModal(this)">
+                    <img src="img/mengajar2.jpg" alt="Team" class="journey-thumb" onclick="openImageModal(this)">
+                </div>
+            </div>
+
+            <div class="journey-card glass-effect tilt-card" style="--i:9;">
+                <div class="card-watermark">09</div>
+                <div class="card-border-glow"></div>
+                <div class="journey-header">
+                    <div class="logo-wrapper">
+                        <img src="img/visi5.png" alt="Logo" class="journey-logo">
+                    </div>
+                    <div class="date-badge">
+                        <span data-i18n="journey_date_2">Sep 2025</span>
+                    </div>
+                </div>
+                <div class="journey-body">
+                    <div class="role-badge">Volunteer</div><br>
+                    <h4 data-i18n="journey_title_2">River Clean-Up Volunteer</h4>
+                    <h5 class="sub-title">Wahana Visi Indonesia</h5>
+                    <p data-i18n="journey_desc_2">"Participated as a volunteer in a river clean-up action to raisepublic awareness of environmental cleanliness and waste management in Surabaya. Collaborated with the Wahana Visi volunteer team in collecting and sorting waste in the river area."</p>
+                </div>
+                <div class="journey-gallery">
+                    <img src="img/v4.jpg" alt="Rapat" class="journey-thumb" onclick="openImageModal(this)">
+                    <img src="img/v3.jpg" alt="Event" class="journey-thumb" onclick="openImageModal(this)">
+                    <img src="img/v1.jpg" alt="Team" class="journey-thumb" onclick="openImageModal(this)">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="skills-section" id="skills">
+        <h2 class="heading neon-pulse" data-text="My Skills" data-i18n="heading_skills">My <span>Skills</span></h2>
+        
+        <div class="skills-row">
+            
+            <div class="skills-column">
+                <h3 class="skill-title">Hard Skills</h3>
+                
+                <div class="skill-box glass-effect">
+                    <div class="hard-skills-grid">
+                        
+                        <div class="tech-item" data-tooltip="CorelDraw">
+                            <img src="img/corel.png" alt="CorelDraw">
+                        </div>
+                        <div class="tech-item" data-tooltip="Canva">
+                            <img src="img/canva.png" alt="Canva">
+                        </div>
+                        <div class="tech-item" data-tooltip="Adobe Illustrator">
+                            <img src="img/ai.png" alt="Adobe Illustrator">
+                        </div>
+                        <div class="tech-item" data-tooltip="After Effect">
+                            <img src="img/ae.png" alt="After Effect">
+                        </div>
+
+                        <div class="tech-item" data-tooltip="Adobe Premier">
+                            <img src="img/pr.png" alt="Adobe Premier">
+                        </div>
+                        <div class="tech-item" data-tooltip="Adobe Photoshop">
+                            <img src="img/ps.png" alt="Adobe Photoshop">
+                        </div>
+
+                        <div class="tech-item" data-tooltip="Blender 3D">
+                            <img src="img/blend.png" alt="Blender 3D">
+                        </div>
+                        <div class="tech-item" data-tooltip="Unity">
+                            <img src="img/Unity-.png" alt="Unity">
+                        </div>
+
+                        <div class="tech-item" data-tooltip="Figma">
+                            <img src="img/figma.png" alt="Figma">
+                        </div>
+
+                        <div class="tech-item" data-tooltip="CapCut">
+                            <img src="img/capcut.png" alt="CapCut">
+                        </div>
+                        <div class="tech-item" data-tooltip="Ibis Paint">
+                            <img src="img/ibis.png" alt="Ibis Paint">
+                        </div>
+                        
+                        <div class="tech-item" data-tooltip="VS Code">
+                            <img src="img/vscode.png" alt="VS Code">
+                        </div>
+
+                        <div class="tech-item" data-tooltip="Word">
+                            <img src="img/word.png" alt="Word">
+                        </div>
+
+                        <div class="tech-item" data-tooltip="Excel">
+                            <img src="img/excle.png" alt="Excel">
+                        </div>
+
+                        <div class="tech-item" data-tooltip="Power Point">
+                            <img src="img/ppt.png" alt="Power Point">
+                        </div>
+
+                        <div class="tech-item" data-tooltip="HTML">
+                            <img src="img/html.png" alt="HTML">
+                        </div>
+
+                        <div class="tech-item" data-tooltip="CSS">
+                            <img src="img/css.png" alt="CSS">
+                        </div>
+
+                        <div class="tech-item" data-tooltip="Java Script">
+                            <img src="img/js.png" alt="Java Script">
+                        </div>
+
+                        <div class="tech-item" data-tooltip="PHP">
+                            <img src="img/php.png" alt="PHP">
+                        </div>
+
+                        <div class="tech-item" data-tooltip="Python">
+                            <img src="img/python.png" alt="Python">
+                        </div>
+
+                        <div class="tech-item" data-tooltip="MySQL">
+                            <img src="img/mysql_.png" alt="MySQL">
+                        </div>
+
+                        <div class="tech-item" data-tooltip="Laragon">
+                            <img src="img/laragon.png" alt="Laragon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-column">
+                <h3 class="skill-title">Soft Skills</h3>
+                
+                <div class="soft-skills-grid">
+                    
+                    <div class="soft-skill-item glass-effect tilt-card">
+                        <i class='bx bxs-group'></i>
+                        <h4>Teamwork</h4>
+                    </div>
+
+                    <div class="soft-skill-item glass-effect tilt-card">
+                        <i class='bx bxs-microphone-alt'></i>
+                        <h4>Communication</h4>
+                    </div>
+
+                    <div class="soft-skill-item glass-effect tilt-card">
+                        <i class='bx bxs-brain'></i>
+                        <h4>Problem Solving</h4>
+                    </div>
+
+                    <div class="soft-skill-item glass-effect tilt-card">
+                        <i class='bx bxs-user-check'></i>
+                        <h4>Leadership</h4>
+                    </div>
+
+                    <div class="soft-skill-item glass-effect tilt-card">
+                        <i class='bx bxs-time-five'></i>
+                        <h4>Time Management</h4>
+                    </div>
+
+                    <div class="soft-skill-item glass-effect tilt-card">
+                        <i class='bx bxs-bulb'></i>
+                        <h4>Creativity</h4>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading neon-pulse" data-text="Latest Project" data-i18n="heading_project"><br>Latest
+            <span>Project</span>
+        </h2>
+        <div class="portfolio-filter">
+            <button class="filter-item active" data-filter="all">All</button>
+            <button class="filter-item" data-filter="web">Web Design & App Mobile</button>
+            <button class="filter-item" data-filter="app">Social Media</button>
+            <button class="filter-item" data-filter="design">Poster Design, etc</button>
+            <button class="filter-item" data-filter="packaging">Packaging</button>
+            <button class="filter-item" data-filter="animasi">2D & 3D Animation</button>
+        </div>
+
+        <div class="portfolio-container">
+            <div class="portfolio-box web glass-effect particle-hover tilt-card">
+                <img src="img/PORTOFOLIO01.png" alt="E-Commerce">
+                <div class="portfolio-layer">
+                    <h4>Coffee Shop Application Interface Design</h4>
+                    <a href="#" class="portfolio-link" data-title="Coffee Shop Application Interface Design"
+                        data-desc="This UI/UX design for a coffee ordering application was created using Figma, focusing on ease of use and a modern visual appearance. The design features intuitive navigation, clear menu exploration, and a coffee-themed color palette to create a comfortable and user-friendly experience."
+                        data-img="img/PORTOFOLIO01.png" data-tech="img/figma.png"> <i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box web glass-effect particle-hover tilt-card">
+                <img src="img/Free-Floating-iPhone-13-Mockup-PSD.png"
+                    alt="GARUDA – Information App for Public Universities in Indonesia">
+                <div class="portfolio-layer">
+                    <h4>GARUDA – Information App for Public Universities in Indonesia</h4>
+                    <a href="#" class="portfolio-link"
+                        data-title="GARUDA – Information App for Public Universities in Indonesia"
+                        data-desc="A mobile application that provides information on public universities in Indonesia. This app allows users to browse a list of universities by region, view campus details, and receive university recommendations through a modern and user-friendly interface. The app is designed with a focus on user comfort, simple navigation, and consistent visuals to ensure information can be accessed quickly and clearly."
+                        data-img="img/iMac-and-iPhone-Pro-Showcase-Screens-Free-psd-Mockup.png, img/Free-Floating-iPhone-13-Mockup-PSD.png, img/iPhone 12 Mockup.png, img/iPhone 12 Mockup3.png, img/iPhone 12 Mockup1.png, img/iPhone 12 Mockup2.png"
+                        data-tech="img/canva.png, img/ppt.png, img/ispring-logo.png"> <i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box web glass-effect particle-hover tilt-card">
+                <img src="img/HP Elitebook Dragonfly.png" alt="Web-Based Digital Library Information System">
+                <div class="portfolio-layer">
+                    <h4>Web-Based Digital Library Information System</h4>
+                    <a href="#" class="portfolio-link" data-title="Web-Based Digital Library Information System"
+                        data-desc="A web-based digital library information system developed to support online book borrowing and management processes. This system allows users to browse the book catalog, view collection details, and borrow books efficiently without needing to visit the library in person. The application is built using PHP as the backend, CSS and JavaScript for the user interface, and MySQL as the database managed through Laragon. The interface design is modern and responsive to enhance user experience."
+                        data-img="img/HP Elitebook Dragonfly.png, img/HP Elitebook Dragonfly2.png, img/Macbook_Air_Mockup_1.png, img/Macbook_Air_Mockup_2.png"
+                        data-tech="img/laragon.jpg, img/vscode.png"> <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box web glass-effect particle-hover tilt-card">
+                <img src="img/M034T0838 iPhone 16 Pro 02.png" alt="Puzzle-Based Programming Educational Game">
+                <div class="portfolio-layer">
+                    <h4>Puzzle-Based Programming Educational Game</h4>
+                    <a href="#" class="portfolio-link" data-title="Puzzle-Based Programming Educational Game"
+                        data-desc="This educational game is designed to help users learn the basics of programming through a puzzle-based concept. Students are encouraged to solve logical challenges by arranging steps or instructions in sequence. The game design is kept simple and interactive to make the learning process more engaging and easy to understand."
+                        data-img="img/M034T0838 iPhone 16 Pro 02.png, img/M034T0838 iPhone 16 Pro 7.png, img/M034T0838 iPhone 16 Pro 55.png, img/HP Elitebook Dragonfly11.png, img/HP Elitebook Dragonfly12.png"
+                        data-tech="img/canva.png, img/corel.png, img/Unity-.png, img/vscode.png"> <i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box web glass-effect particle-hover tilt-card">
+                <img src="img/A1.png" alt="Personal Portfolio Website">
+                <div class="portfolio-layer">
+                    <h4>Personal Portfolio Website</h4>
+                    <a href="#" class="portfolio-link" data-title="Personal Portfolio Website"
+                        data-desc="This personal portfolio website was developed using HTML, CSS, and JavaScript to showcase my projects, skills, experiences, and certifications in a structured and visually engaging manner. The website is designed to highlight my background in graphic design, social media, web development, and digital media, while also serving as a professional platform for personal branding and career opportunities."
+                        data-img="img/A1.png, img/A5.png, img/A2.png, img/A3.png, img/A4.png, img/A4.png"
+                        data-tech="img/vscode.png"> <i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box app glass-effect particle-hover tilt-card">
+                <img src="img/PORTOFOLIO10.png" alt="Instagram Carousel Feed Design">
+                <div class="portfolio-layer">
+                    <h4>Instagram Carousel Feed Design</h4>
+                    <a href="#" class="portfolio-link" data-title="Instagram Carousel Feed Design"
+                        data-desc="This project focuses on creating Instagram carousel feed designs for store promotion, emphasizing clean layouts, visual consistency, and easy-to-read content."
+                        data-img="img/PORTOFOLIO10.png, img/PORTOFOLIO02.png" data-tech="img/canva.png"> <i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box app glass-effect particle-hover tilt-card">
+                <img src="img/PORTOFOLIO03.png" alt="Instagram Carousel Feed Design">
+                <div class="portfolio-layer">
+                    <h4>Instagram Carousel Feed Design</h4>
+                    <a href="#" class="portfolio-link" data-title="Instagram Carousel Feed Design"
+                        data-desc="This project focuses on creating Instagram carousel feed designs for store promotion, emphasizing clean layouts, visual consistency, and easy-to-read content."
+                        data-img="img/PORTOFOLIO03.png" data-img="img/PORTOFOLIO03.png"
+                        data-tech="img/canva.png, img/corel.png"> <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box app glass-effect particle-hover tilt-card">
+                <img src="img/PORTOFOLIO04.png" alt="Instagram Carousel Feed Design">
+                <div class="portfolio-layer">
+                    <h4>Instagram Carousel Feed Design</h4>
+                    <a href="#" class="portfolio-link" data-title="Instagram Carousel Feed Design"
+                        data-desc="This project focuses on creating Instagram carousel feed designs for store promotion, emphasizing clean layouts, visual consistency, and easy-to-read content."
+                        data-img="img/PORTOFOLIO04.png" data-img="img/PORTOFOLIO04.png"
+                        data-tech="img/canva.png, img/corel.png"> <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box design glass-effect particle-hover tilt-card">
+                <img src="img/PORTOFOLIO05.jpg" alt="Book Cover Design">
+                <div class="portfolio-layer">
+                    <h4>Book Cover Design</h4>
+                    <a href="#" class="portfolio-link" data-title="Book Cover Design"
+                        data-desc="Children’s book cover and layout design with a learning-to-read and coloring theme, using simple illustrations and bright colors."
+                        data-img="img/PORTOFOLIO05.jpg, img/PORTOFOLIO06.png, img/Free_Book_Mockup_1.png, img/open-book-mockup-on-velvet-chair-v4-isometric.png"
+                        data-tech="img/canva.png"> <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box design glass-effect particle-hover tilt-card">
+                <img src="img/02 A4 Poster Mockup On Concrete2.png" alt="Infographic Poster Design">
+                <div class="portfolio-layer">
+                    <h4>Infographic Poster Design</h4>
+                    <a href="#" class="portfolio-link" data-title="Infographic Poster Design"
+                        data-desc="An infographic poster design that presents information in a concise, visual, and easy-to-read manner through the use of simple illustrations, consistent colors, and a clean layout."
+                        data-img="img/02 A4 Poster Mockup On Concrete2.png, img/03 A4 Poster Mockup On Concrete1.png, img/Poster_on_Concrete_Background_Mockup_3.png, img/Poster_on_Concrete_Background_Mockup_1.png"
+                        data-tech="img/ai.png, img/ibis.png"> <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box app glass-effect particle-hover tilt-card">
+                <img src="img/Free_K_Mockups_iPhone_15_Pro.png" alt="Instagram Feed Design">
+                <div class="portfolio-layer">
+                    <h4>Instagram Feed Design</h4>
+                    <a href="#" class="portfolio-link" data-title="Instagram Feed Design"
+                        data-desc="This Instagram feed design is created as a visual template for delivering messages and information. Each design is arranged with a clean and consistent layout to make it easy to use for various content needs, such as digital posters or announcements. The design focuses on readability, visual consistency, and ease of adaptation for Instagram feeds."
+                        data-img="img/Free_K_Mockups_iPhone_15_Pro.png, img/Poster_Mockup_1.png, img/Poster_Mockup_2.png, img/Poster_on_Concrete_Background_Mockup_11.png, img/Poster_on_Concrete_Background_Mockup_22.png, img/B1.png, img/B2.png, img/B3.png, img/B4.png, img/B5.png, img/B6.png, img/B7.png, img/B8.png, img/B9.png"
+                        data-tech="img/canva.png"> <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box design glass-effect particle-hover tilt-card">
+                <img src="img/Invitation Card Free Mockups.png" alt="Pamphlet Design">
+                <div class="portfolio-layer">
+                    <h4>Pamphlet Design</h4>
+                    <a href="#" class="portfolio-link" data-title="Pamphlet Design"
+                        data-desc="The pamphlet design is created as a medium for delivering information with a simple and easy-to-understand appearance. It uses illustrations, harmonious colors, and a neat layout to ensure the information can be read clearly."
+                        data-img="img/Invitation Card Free Mockups.png" data-tech="img/canva.png"> <i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box design glass-effect particle-hover tilt-card">
+                <img src="img/Free paper postal packages mockup.png" alt="Wedding Invitation Design">
+                <div class="portfolio-layer">
+                    <h4>Wedding Invitation Design</h4>
+                    <a href="#" class="portfolio-link" data-title="Wedding Invitation Design"
+                        data-desc="This wedding invitation design features an elegant and simple style, combined with couple illustrations, floral elements, and soft colors. The layout is arranged neatly to ensure the event information is clear and easy to read."
+                        data-img="img/Free paper postal packages mockup.png, img/Invitation - Greeting Card Mockup - By PuneDesign.png, img/Invitation - Greeting Card Mockup - By PuneDesign2.png, img/Invitation - Greeting Card Mockup - By PuneDesign3.png"
+                        data-tech="img/corel.png, img/ps.png"> <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box design glass-effect particle-hover tilt-card">
+                <img src="img/Free_Calendar_Mockup_23.png" alt="School Calendar Design 2026">
+                <div class="portfolio-layer">
+                    <h4>School Calendar Design 2026</h4>
+                    <a href="#" class="portfolio-link" data-title="School Calendar Design 2026"
+                        data-desc="The school calendar design was created using CorelDRAW X7 and presented in a mockup using Adobe Photoshop. The layout is designed to be informative, featuring the annual calendar, school profile, and activity documentation, making it suitable for publication and promotional media. The combination of colors, typography, and graphic elements is arranged neatly to ensure readability and visual appeal. This design aims to provide a professional and representative look to support the school’s branding needs."
+                        data-img="img/Free_Calendar_Mockup_23.png, img/Free A4 Letterhead Mockup1.png, img/Free A4 Letterhead Mockup2.png, img/Free A4 Letterhead Mockup3.png, img/Free A4 Letterhead Mockup5.png, img/Free A4 Letterhead Mockup6.png, img/Free A4 Letterhead Mockup7.png"
+                        data-tech="img/corel.png, img/ps.png"> <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box design glass-effect particle-hover tilt-card">
+                <img src="img/construction-banner-mockup.png" alt="Banner Design">
+                <div class="portfolio-layer">
+                    <h4>Banner Design</h4>
+                    <a href="#" class="portfolio-link" data-title="Banner Design"
+                        data-desc="This banner design was created as an informational medium for events, featuring a clear and structured layout to make it effective for use as a publication and promotional media for various activities."
+                        data-img="img/construction-banner-mockup.png, img/construction-banner-mockup1.png"
+                        data-tech="img/canva.png"> <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box packaging glass-effect particle-hover tilt-card">
+                <img src="img/PORTOFOLIO07.jpg" alt="Pancake Packaging Design">
+                <div class="portfolio-layer">
+                    <h4>Pancake Packaging Design</h4>
+                    <a href="#" class="portfolio-link" data-title="Pancake Packaging Design"
+                        data-desc="Pancake packaging design with a functional and easy-to-carry form to reduce plastic waste. The visual uses attractive colors and simple illustrations to match the product’s character."
+                        data-img="img/PORTOFOLIO07.jpg" data-tech="img/corel.png, img/ps.png"> <i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box packaging glass-effect particle-hover tilt-card">
+                <img src="img/Free Food Boxes Packaging Mockup.png" alt="Ratoe Madura Beverage Packaging Design">
+                <div class="portfolio-layer">
+                    <h4>Ratoe Madura Beverage Packaging Design</h4>
+                    <a href="#" class="portfolio-link" data-title="Ratoe Madura Beverage Packaging Design"
+                        data-desc="A packaging design for Ratoe Madura herbal drink that combines a modern look with traditional elements. The design uses fresh green tones, clear typography, and realistic ingredient illustrations to highlight the product’s natural character. The packaging is designed to be practical, visually consistent, and appealing to younger consumers."
+                        data-img="img/Free Food Boxes Packaging Mockup.png, img/01.png"
+                        data-tech="img/canva.png, img/ps.png"> <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box packaging glass-effect particle-hover tilt-card">
+                <img src="img/PORTOFOLIO09.jpg" alt="Chili Sauce Label Design">
+                <div class="portfolio-layer">
+                    <h4>Chili Sauce Label Design</h4>
+                    <a href="#" class="portfolio-link" data-title="Chili Sauce Label Design"
+                        data-desc="Label design for bottled chili sauce, featuring a simple layout, strong color contrast, and visuals that represent spiciness and product identity."
+                        data-img="img/PORTOFOLIO09.jpg, img/PORTOFOLIO08.png" data-tech="img/ai.png, img/ps.png"> <i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box packaging glass-effect particle-hover tilt-card">
+                <img src="img/PORTOFOLIO11.png" alt="Chocolate Packaging Design">
+                <div class="portfolio-layer">
+                    <h4>Chocolate Packaging Design</h4>
+                    <a href="#" class="portfolio-link" data-title="Chocolate Packaging Design"
+                        data-desc="Chocolate packaging design featuring a clean and elegant look that highlights product identity and a premium feel."
+                        data-img="img/PORTOFOLIO11.png, img/Image0070.png" data-tech="img/corel.png, img/ps.png"> <i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box animasi glass-effect particle-hover tilt-card">
+                <img src="img/M003T1516 B Macbook Mockup 09sep25.png"
+                    alt="Organizational Event Opening Motion Graphic Video">
+                <div class="portfolio-layer">
+                    <h4>Organizational Event Opening Motion Graphic Video</h4>
+                    <a href="#" class="portfolio-link" data-title="Organizational Event Opening Motion Graphic Video"
+                        data-desc="This video is a short motion graphic designed as an event opening. It uses logo animation, text, and dynamic visual elements to build the atmosphere of the event, making it appear more professional, engaging, and memorable. The visual design focuses on smooth transitions and balanced composition so that the opening message is delivered clearly."
+                        data-img="img/M003T1516 B Macbook Mockup 09sep25.png, img/M003T1516 C Macbook Mockup 09sep25.png, img/Desain tanpa judul (1).mp4"
+                        data-tech="img/ae.png"> <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box animasi glass-effect particle-hover tilt-card">
+                <img src="img/3D9.png" alt="3D Animation">
+                <div class="portfolio-layer">
+                    <h4>3D Animation</h4>
+                    <a href="#" class="portfolio-link" data-title="3D Animation"
+                        data-desc="This marine-themed 3D animation project was created as visual media with a modern and immersive appearance. The animation features a marine environment combined with three-dimensional objects, camera movement, and dynamic lighting to create a lively and engaging visual atmosphere. The visual composition is balanced to align with the marine theme concept."
+                        data-img="img/3D9.png, img/3D1.png, img/VID_20250731082601.mp4" data-tech="img/blend.png"> <i
+                            class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+
+            <div class="portfolio-box animasi glass-effect particle-hover tilt-card">
+                <img src="img/Macbook_Air_Mockup_411.png" alt="3D Design">
+                <div class="portfolio-layer">
+                    <h4>3D Design</h4>
+                    <a href="#" class="portfolio-link" data-title="3D Design"
+                        data-desc="This 3D design was created using three-dimensional objects with lighting and composition arranged for project presentation purposes. The design combines props, textures, and balanced lighting to create visual appeal. This project highlights basic 3D modeling, material application, and scene setup as part of an academic assignment."
+                        data-img="img/Macbook_Air_Mockup_411.png, img/3D5.png, img/3D6.png, img/M003T1516 C Macbook Mockup 09sep2511.png, img/M003T1516 C Macbook Mockup 09sep2522.png, img/M003T1516 C Macbook Mockup 09sep2533.png"
+                        data-tech="img/blend.png"> <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="certificates" id="certificates">
+        <h2 class="heading neon-pulse" data-text="Certificates" data-i18n="heading_cert">My
+            <span>Certificates</span>
+        </h2>
+        <div class="certificates-container">
+            <div class="cert-card glass-effect tilt-card" onclick="openImageModal(this.querySelector('img'))">
+                <div class="cert-img-wrapper">
+                    <img src="img/sertif app.jpg"
+                        alt="Certificate of Competency in Multimedia – Interactive Learning Media Application">
+                    <div class="cert-overlay">
+                        <i class='bx bx-zoom-in'></i>
+                    </div>
+                </div>
+                <div class="cert-info">
+                    <h4>Multimedia Competency Certificate "Interactive Learning Media Application"</h4>
+                    <p>Ma'arif NU Prambon Sidoarjo Vocational High School</p>
+                </div>
+            </div>
+            <div class="cert-card glass-effect tilt-card" onclick="openImageModal(this.querySelector('img'))">
+                <div class="cert-img-wrapper">
+                    <img src="img/upt.jpg" alt="Certificate of Logo and Packaging Design Training">
+                    <div class="cert-overlay">
+                        <i class='bx bx-zoom-in'></i>
+                    </div>
+                </div>
+                <div class="cert-info">
+                    <h4>Certificate of Logo and Packaging Design Training</h4>
+                    <p>Pemerintah Prov. Jawa Timur <br>
+                        Dinas Pendidikan<br>
+                        UPT. Pengembangan Teknis & Keterampilan Kejuruan</p>
+                </div>
+            </div>
+            <div class="cert-card glass-effect tilt-card" onclick="openCertModal(this)">
+                <div class="cert-img-wrapper">
+                    <img src="img/Sertifikat Uji Kompetensi1.jpg"
+                        data-slides="img/Sertifikat Uji Kompetensi1.jpg, img/Sertifikat Uji Kompetensi2.jpg"
+                        alt="3D Interior Design Project">
+                    <div class="cert-overlay">
+                        <i class='bx bx-images'></i>
+                    </div>
+                </div>
+                <div class="cert-info">
+                    <h4>3D Interior Design Project</h4>
+                    <p>Ma'arif NU Prambon Sidoarjo Vocational High School</p>
+                </div>
+            </div>
+
+            <div class="cert-card glass-effect tilt-card" onclick="openImageModal(this.querySelector('img'))">
+                <div class="cert-img-wrapper">
+                    <img src="img/magangmaja.jpg" alt="Certificate of Internship">
+                    <div class="cert-overlay">
+                        <i class='bx bx-zoom-in'></i>
+                    </div>
+                </div>
+                <div class="cert-info">
+                    <h4>Certificate of Internship</h4>
+                    <p>PT. Radio Majapari Indah Suara Mojokerto</p>
+                </div>
+            </div>
+
+            <div class="cert-card glass-effect tilt-card" onclick="openCertModal(this)">
+                <div class="cert-img-wrapper">
+                    <img src="img/Sertifikat Lomba Poster Genbi.png"
+                        data-slides="img/Sertifikat Lomba Poster Genbi.png, img/Sertifikat Lomba Poster GPest.jpg, img/kalighrafi.jpg"
+                        alt="Certificate of Competition">
+                    <div class="cert-overlay">
+                        <i class='bx bx-images'></i>
+                    </div>
+                </div>
+                <div class="cert-info">
+                    <h4>Certificate of Competition</h4>
+                    <p>Campus & General</p>
+                </div>
+            </div>
+
+            <div class="cert-card glass-effect tilt-card" onclick="openCertModal(this)">
+                <div class="cert-img-wrapper">
+                    <img src="img/sertif1.png" data-slides="img/sertif1.png, img/49.png"
+                        alt="Certificate of Participation">
+                    <div class="cert-overlay">
+                        <i class='bx bx-images'></i>
+                    </div>
+                </div>
+                <div class="cert-info">
+                    <h4>Certificate of Participation</h4>
+                    <p>Organization Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="contact" id="contact">
+    <h2 class="heading neon-pulse">Contact <span>Me!</span></h2>
+
+    <form action="https://formspree.io/f/meoedgpo" method="POST">
+        <div class="input-box">
+            <div class="input-field">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <span class="focus"></span>
+            </div>
+            <div class="input-field">
+                <input type="email" name="email" placeholder="Email Address" required>
+                <span class="focus"></span>
+            </div>
+        </div>
+
+        <div class="input-box">
+            <div class="input-field">
+                <input type="number" name="phone" placeholder="Mobile Number" required>
+                <span class="focus"></span>
+            </div>
+            <div class="input-field">
+                <input type="text" name="subject" placeholder="Email Subject" required>
+                <span class="focus"></span>
+            </div>
+        </div>
+
+        <div class="textarea-field">
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <span class="focus"></span>
+        </div>
+
+        <div class="btn-box">
+            <button type="submit" class="btn">Send Message</button>
+        </div>
+    </form>
+</section>
+
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright 2022–2025 &copy; The copyright of this work is valid from 2022 to 2026</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+
+        <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+    </footer>
+
+    <div class="modal" id="cvModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Curriculum Vitae</h2>
+            <p data-i18n="cv_desc">Choose CV format to download:</p>
+            <div class="modal-buttons">
+                <a href="#" class="btn magnetic-btn">Download PDF</a>
+                <a href="#" class="btn magnetic-btn" data-i18n="btn_view_online">View Online</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="portfolioModal">
+        <div class="modal-content portfolio-modal-content wide-modal">
+            <span class="close-portfolio">&times;</span>
+
+            <div class="modal-body-layout">
+                <div class="modal-left">
+                    <div class="slideshow-wrapper">
+                        <div class="slideshow-container" id="slideshow-container">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-right">
+                    <h2 id="popup-title">Project Title</h2>
+
+                    <div class="project-meta">
+                        <div class="tech-pill">
+                            <span class="pill-label">Software By:</span>
+                            <div class="pill-icons" id="tech-stack-icons">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="desc-box">
+                        <h4 class="desc-heading">Description</h4>
+                        <p id="popup-desc">Deskripsi detail dokumentasi atau proyek.</p>
+                    </div>
+
+                    <div class="modal-action">
+                        <a href="#" class="btn magnetic-btn small-btn">Live Demo <i
+                                class='bx bx-right-arrow-alt'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="simpleImageModal">
+        <span class="close-simple">&times;</span>
+
+        <a class="simple-prev" onclick="changeCertSlide(-1)">&#10094;</a>
+        <a class="simple-next" onclick="changeCertSlide(1)">&#10095;</a>
+
+        <img class="simple-modal-content" id="simpleImage">
+
+        <div id="simple-page-num" style="color:white; margin-top:10px; font-weight:600;"></div>
+    </div>
+
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,id',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
